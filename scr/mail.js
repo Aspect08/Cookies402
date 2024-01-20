@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -17,4 +16,3 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const storageRef = ref(storage);
 
-const imagesRef = ref(storage, 'images')

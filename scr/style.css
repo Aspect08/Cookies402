@@ -305,3 +305,16 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+.btn2{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}

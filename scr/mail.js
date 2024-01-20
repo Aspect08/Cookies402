@@ -15,4 +15,41 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const storageRef = ref(storage);
+const { ArtifactRegistryClient } = require('@google-cloud/artifact-registry');
+
+async function listRepositoriesAndPackages() {
+  // Set your Google Cloud project ID
+  const projectId = 'your-project-id';
+  const location = 'us-central1'; // Set your desired location
+
+  const client = new ArtifactRegistryClient();
+
+  try {
+    // Example: List repositories
+    const repositories = await client.listRepositories({
+      parent: `projects/${projectId}/locations/${location}`,
+    });
+    console.log('Repositories:');
+    repositories[0].forEach(repository => {
+      console.log(repository.name);
+    });
+
+    // Example: List packages in a repository
+    const repositoryName = 'your-repository';
+    const packages = await client.listPackages({
+      parent: `projects/${projectId}/locations/${location}/repositories/${repositoryName}`,
+    });
+    console.log(`Packages in repository ${repositoryName}:`);
+    packages[0].forEach(package => {
+      console.log(package.name);
+    });
+  } finally {
+    // Close the client when done
+    client.close();
+  }
+}
+
+// Run the function
+listRepositoriesAndPackages();
+
 

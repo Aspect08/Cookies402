@@ -66,7 +66,7 @@ header{
 .parallax{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 100vh;
     background: url('imgs_icons/bg.jpeg') no-repeat;
@@ -305,36 +305,23 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
-.btn2{
-    width: 100%;
-    height: 45px;
-    background: transparent;
-    border: 2px solid white;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-  }
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+    float: left; /* Add this property to make cards float side by side */
+    margin-right: 20px; /* Adjust the margin as needed */
 }
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 img {
     border-radius: 5px 5px 0 0;
 }
 
-.btn3{
+.btn3, .btn4 {
     width: 100%;
     height: 45px;
     background: transparent;
@@ -346,7 +333,8 @@ img {
     color: #fff;
     font-weight: 500;
 }
-.container{
+
+.container {
     justify-content: space-between;
     align-items: justify;
     padding: 2px 16px;
@@ -357,6 +345,29 @@ img {
     font-weight: 600;
     margin-left: 20px;
     padding: 6px 15px;
-    
 }
 
+
+.btn3, .btn4 { 
+    width: 100%;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn3 a, .btn4 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h2{
+    text-align: left;
+    color: #162938;
+}

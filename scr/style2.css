@@ -72,7 +72,8 @@ header{
 
 form {
   padding: 25px;
-  background: #975c3c;
+  background: transparent;
+  backdrop-filter: blur(25px);
   max-width: 500px;
   width: 100%;
   border-radius: 7px;
@@ -159,4 +160,17 @@ form .password i {
 
 .submit-btn input:hover {
   background: #162e41;
+}
+
+.search-btn, .location-btn{
+  border-radius: 100px;
+  width: 45%;
+  height: 45px;
+  background: transparent;
+  border: 2px solid #000000;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
 }

@@ -70,7 +70,7 @@ header{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('imgs_icons/bg.jpeg') no-repeat;
+    background: url('imgs_icons/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -331,7 +331,7 @@ header{
 }
 
 img {
-    border-radius: 50px;
+    border-radius: 5px 5px 0 0;
 }
 
 .btn3, .btn4 {
@@ -347,6 +347,19 @@ img {
     font-weight: 500;
 }
 
+.container {
+    justify-content: space-between;
+    align-items: justify;
+    padding: 2px 16px;
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 6px 15px;
+}
+
 
 .btn3, .btn4 { 
     width: 100%;
@@ -354,7 +367,7 @@ img {
     background-color: #162938;
     border: none;
     outline: none;
-    border-radius: 100px;
+    border-radius: px;
     cursor: pointer;
     font-size: 1em;
     color: #fff;
